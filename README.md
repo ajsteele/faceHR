@@ -2,10 +2,12 @@ Here’s the code we used in [my video with Steve Mould]() to extract his heart 
 
 It’s very much hacked-together-for-a-video level code, but it does run. If you’d like to clean this up and make it slightly more usable, please feel free to make a pull request. :)
 
+If you want a sample video to test it on, you can download the one we used in the video [here](https://drive.google.com/file/d/17mvmDcXqAHtU7Gan9x8u1us0-CwLqHo4/view)!
+
 ## How to use `stattohr.py`
 
 - You’ll probably need to install a few Python libraries to make this work, see the `import` statements at the top of the script.
-- Run it with `python stattohr.py -f filename.mp4` to extract the heart rate from a file.
+- Run it with `python stattohr.py -f steve-face-hr.mp4` to extract the heart rate from a file.
 - It will start by displaying random frames from the video so you can pick a skin colour. Click somewhere on the face, and then press A to show the ‘chroma key’ it’s using, which will display a terrifying black and white image like this: ![](steve-face-terrifying-chroma.png) This is looking good—it’s selected most of Steve’s skin!
 - Press O for ‘OK’, and it will go through taking the average of the skin-coloured pixels and storing it for processing later. You can press A again which has the dual benefit of making it less terrifying to watch, and speeding things up a bit because it can just display the straight video.
 - Once it’s gone through the whole video, it will display a few graphs to check everything worked. These show the raw RGB values (not very informative as the main thing you can see is that skin contains more R than G and B!), the RGB values with moving averages subtracted (explained below), and then YUV values with moving averages subtracted (YUV is commonly used when extracting heart rate from skin).
