@@ -1,4 +1,4 @@
-Here’s the code we used in [my video with Steve Mould]() to extract his heart rate from a video of his face!
+Here’s the code we used in [my video with Steve Mould](https://www.youtube.com/watch?v=BFZxlauizx0) to extract his heart rate from a video of his face!
 
 It’s very much hacked-together-for-a-video level code, but it does run. If you’d like to clean this up and make it slightly more usable, please feel free to make a pull request. :)
 
